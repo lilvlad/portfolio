@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LilVlad | Video Editing & Website Development | Website Portfolio"
+    />
+    <meta name="theme-color" content="#434343" />
+
+    <link rel="stylesheet" href="style.css" preload media="all" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+      preload
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+      preload
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css"
+    />
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <title>Website</title>
+  </head>
+  <body>
+    <!-- mouse -->
+    <div id="trailer">
+      <i id="trailer-icon" class="fa-solid fa-arrow-up-right"></i>
+    </div>
+    <!-- mouse end -->
+    <nav class="nav">
+      <img
+        src="assets/img/memoji-1x.webp"
+        alt="memoji"
+        id="memoji"
+        class="nav-img"
+      />
+      <!--  <span class="nav-item" active-color="white" data-switcher data-tab="1"
+        >Website</span
+      > -->
+      <span
+        class="nav-item is-active"
+        active-color="white"
+        data-switcher
+        data-tab="1"
+        >Video Editing</span
+      >
+      <span class="nav-indicator"></span>
+    </nav>
+
+    <section class="pages">
+      <!-- <div class="page" data-page="1">
+        <div class="title">
+          <h1>
+            Hey, I'm
+            <span class="magic">
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-text">Vlad Oryshchuk</span>
+            </span>
+            and I am a Frontend Developer!
+          </h1>
+        </div>
+        <div id="cards">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-home-smile-line"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-home-smile-line"></i>
+                  <div class="card-info-title">
+                    <h2>Apartments</h2>
+                    <h3>Places to be apart. Wait, what?</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-omega"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-omega"></i>
+                  <div class="card-info-title">
+                    <h2>Unicorns</h2>
+                    <h3>A single corn. Er, I mean horn.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-phone-line"></i>
+                  <div class="card-info-title">
+                    <h2>Blender Phones</h2>
+                    <h3>These absolutely deserve to exist.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-account-pin-circle-fill"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-account-pin-circle-fill"></i>
+                  <div class="card-info-title">
+                    <h2>Adios</h2>
+                    <h3>See you...</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-ancient-gate-line"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-ancient-gate-line"></i>
+                  <div class="card-info-title">
+                    <h2>I mean hello</h2>
+                    <h3>...over here.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="ri-calculator-line"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <i class="ri-calculator-line"></i>
+                  <div class="card-info-title">
+                    <h2>Otters</h2>
+                    <h3>Look at me, imma cute lil fella.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="page page-active" data-page="1">
+        <!-- Title -->
+        <div class="title">
+          <h1>
+            Hey, I'm
+            <span class="magic">
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-text">Vlad</span>
+            </span>
+            and I love
+            <span class="magic">
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-star">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                  />
+                </svg>
+              </span>
+              <span class="magic-text">Video Editing</span>
+            </span>
+          </h1>
+        </div>
+        <!-- Splide carousel -->
+        <section class="page-container">
+          <div class="container-carousel">
+            <h1>Short Videos</h1>
+            <div class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li
+                    class="splide__slide interactable"
+                    data-type="video"
+                    data-splide-html-video="assets/video/short1.mp4"
+                  >
+                    <img
+                      alt="Carousel Thumbnail"
+                      srcset="
+                        assets/img/responsive/1-1x.webp 1x,
+                        assets/img/responsive/1-2x.webp 2x,
+                        assets/img/responsive/1-3x.webp 3x
+                      "
+                      src="assets/img/responsive/1.webp"
+                    />
+                  </li>
+                  <li
+                    class="splide__slide interactable"
+                    data-type="video"
+                    data-splide-html-video="assets/video/short2.mp4"
+                  >
+                    <img
+                      alt="Carousel Thumbnail"
+                      srcset="
+                        assets/img/responsive/2-1x.webp 1x,
+                        assets/img/responsive/2-2x.webp 2x,
+                        assets/img/responsive/2-3x.webp 3x
+                      "
+                      src="assets/img/responsive/2.webp"
+                    />
+                  </li>
+                  <li
+                    class="splide__slide interactable"
+                    data-type="video"
+                    data-splide-html-video="assets/video/short3.mp4"
+                  >
+                    <img
+                      alt="Carousel Thumbnail"
+                      srcset="
+                        assets/img/responsive/3-1x.webp 1x,
+                        assets/img/responsive/3-2x.webp 2x,
+                        assets/img/responsive/3-3x.webp 3x
+                      "
+                      src="assets/img/responsive/3.webp"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end splide -->
+        <!-- Hover Cards -->
+        <section class="page-container">
+          <div id="cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fi fi-rr-lightbulb-exclamation"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fi fi-rr-lightbulb-exclamation"></i>
+                    <div class="card-info-title">
+                      <h2>Have Brilliant Ideas?</h2>
+                      <h3>We make them come true.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fi fi-rr-badge"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fi fi-rr-badge"></i>
+                    <div class="card-info-title">
+                      <h2>Quality Guarantee</h2>
+                      <h3>With over 2+ years of experience.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fi fi-rr-chat-arrow-grow"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fi fi-rr-chat-arrow-grow"></i>
+                    <div class="card-info-title">
+                      <h2>High Engagment</h2>
+                      <h3>Viewers can't take their eyes from the video.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Main Video -->
+        <section class="page-container">
+          <h1>Latest Video</h1>
+          <div id="video-container" class="interactable" data-type="video">
+            <video id="video" preload="metadata">
+              <source
+                id="video-source"
+                type="video/mp4"
+                src="assets/video/999 Preview_1.mp4"
+              />
+            </video>
+            <!--  <button id="play-button" type="button" title="play-btn">
+            <span class="play-icon"><i class="ri-play-circle-fill"></i></span>
+            <div class="progress-bar-animation">
+              <div class="progress-bar-circle"></div>
+            </div>
+          </button> -->
+          </div>
+        </section>
+        <!-- End Main Video -->
+        <!-- Tilt Effect -->
+        <h1>The Process of Making</h1>
+        <div
+          id="image-comparison-slider"
+          onmouseover="hideTrailer()"
+          onmouseout="showTrailer()"
+        >
+          <video preload="metadata" autoplay loop>
+            <source type="video/mp4" src="assets/video/beforeFX.webm" />
+          </video>
+          <div class="img-wrapper">
+            <video preload="metadata" autoplay loop>
+              <source type="video/mp4" src="assets/video/afterFX.webm" />
+            </video>
+          </div>
+          <span class="label label-before">Before</span>
+          <span class="label label-after">After</span>
+          <div class="handle">
+            <div class="handle-line"></div>
+            <div class="handle-circle">
+              <i class="ri-expand-left-right-line"></i>
+            </div>
+            <div class="handle-line"></div>
+          </div>
+        </div>
+        <!-- End Tilt -->
+      </div>
+    </section>
+
+    <!-- Main JS Script is in the <head> -->
+    <script src="js/javascript.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+      defer
+    ></script>
+    <script src="js/tilt.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+      async
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js"
+      async
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#memoji").hover(
+          function () {
+            $(this).attr("src", "assets/img/memoji.gif");
+          },
+          function () {
+            $(this).attr("src", "assets/img/memoji-1x.webp");
+          }
+        );
+      });
+      new Splide(".splide", {
+        type: "loop",
+        padding: "5rem",
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        focus: "center",
+        autoHeight: true,
+        volume: (number = 0.5),
+        cover: false,
+        arrows: false,
+        wheel: false,
+        /* slideFocus: true,
+        isNavigation: true, 
+        pagination: true,*/
+        video: {
+          loop: true,
+          disableOverlayUI: true,
+          hideControls: true,
+        },
+        mediaQuery: "max",
+        breakpoints: {
+          768: {
+            perPage: 1,
+          },
+        },
+      }).mount(window.splide.Extensions);
+    </script>
+  </body>
+</html>
