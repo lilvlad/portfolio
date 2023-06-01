@@ -1030,6 +1030,10 @@ body:hover > #trailer {
 /* Media queries Responsive */
 
 @media screen and (max-width: 64rem) {
+    .title h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
   .splide {
     width: 100vw;
     padding-inline: 0.5rem;
