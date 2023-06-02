@@ -29,6 +29,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
     <title>Website</title>
   </head>
@@ -350,54 +355,12 @@
           </button> -->
           </div>
         </section>
-        <!-- Tilt Effect -->
-        <section class="page-container">
-          <h1>The Process of Making</h1>
-          <div
-            id="image-comparison-slider"
-            onmouseover="hideTrailer()"
-            onmouseout="showTrailer()"
-          >
-            <video preload="metadata" autoplay loop>
-              <source type="video/mp4" src="assets/video/beforeFX.webm" />
-            </video>
-            <div class="img-wrapper">
-              <video preload="metadata" autoplay loop>
-                <source type="video/mp4" src="assets/video/afterFX.webm" />
-              </video>
-            </div>
-            <span class="label label-before">Before</span>
-            <span class="label label-after">After</span>
-            <div class="handle">
-              <div class="handle-line"></div>
-              <div class="handle-circle">
-                <i class="ri-expand-left-right-line"></i>
-              </div>
-              <div class="handle-line"></div>
-            </div>
-          </div>
-        </section>
-        <section class="page-container">
-          <h1>Let's Work Together</h1>
-        </section>
       </div>
     </section>
 
     <!-- Main JS Script is in the <head> -->
-    <script src="js/javascript.js" async></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-      defer
-    ></script>
-    <script src="js/tilt.js" defer></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
-      async
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js"
-      async
-    ></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/tilt.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.4.js"
       integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="

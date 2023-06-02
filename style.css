@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --bg-color: rgb(20, 20, 20);
   --card-color: rgb(23, 23, 23);
@@ -204,11 +206,20 @@ h1 > .magic > .magic-text {
 .title {
   margin-top: 3rem;
   padding-inline: 1rem;
+  line-height: 5rem;
 }
-
-.title h1 {
-  font-size: 5rem;
+.title .magic-text {
+  font-family: "Geologica", sans-serif;
+  font-size: 4rem;
   font-weight: 900;
+}
+.title span {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.title h1 {
+  font-size: 6rem;
+  font-weight: 800;
 }
 
 /* Cards Hover */
@@ -1058,6 +1069,22 @@ body:hover > #trailer {
 }
 
 @media screen and (max-width: 32rem) {
+  .title {
+    line-height: 2.5rem;
+  }
+  .title .magic-text {
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+  .title span {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+  .title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
   .nav {
     margin-block: 25px;
   }
