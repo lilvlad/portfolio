@@ -54,6 +54,89 @@ body {
   font-family: var(--font);
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #434343;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5e5e5e;
+}
+
+.contact-icon {
+  position: fixed; /* position: relative; */
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  margin: 2rem;
+  z-index: 999;
+  border-radius: 150px;
+  transition: all 0.5s;
+}
+.contact-icon a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+#contact-video {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  max-width: 100%;
+  border-radius: 150px;
+  object-fit: contain;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+.contact-icon:hover #contact-video {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* contact svg */
+.rounded-text {
+  width: 10rem;
+  height: 10rem;
+  text-transform: uppercase;
+  /* transform: scale(1.5);
+  font-weight: bold; */
+  z-index: 9999;
+  letter-spacing: 0.5rem;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  animation: rotating 15s linear infinite;
+}
 
 /* navbar */
 .nav {
@@ -61,6 +144,7 @@ body {
   flex-direction: row;
   position: fixed; /* position: relative; */
   top: 0;
+  margin: auto;
   margin-top: 25px;
   overflow: hidden;
   max-width: 100%;
@@ -138,7 +222,7 @@ body {
 
 .nav-indicator {
   position: absolute;
-  left: 0;
+  right: 0;
   /* bottom: 7.5px; */
   bottom: 18%;
   transition: 0.3s;
@@ -1041,7 +1125,7 @@ body:hover > #trailer {
 /* Media queries Responsive */
 
 @media screen and (max-width: 64rem) {
-    .title h1 {
+  .title h1 {
     font-size: 1.5rem;
     font-weight: 900;
   }
@@ -1073,6 +1157,10 @@ body:hover > #trailer {
 }
 
 @media screen and (max-width: 32rem) {
+  .rounded-text {
+    width: 5rem;
+    height: 5rem;
+  }
   .title {
     line-height: 2.5rem;
   }
@@ -1089,9 +1177,6 @@ body:hover > #trailer {
     font-weight: 800;
   }
 
-  .nav {
-    margin-block: 25px;
-  }
   #video {
     width: 90vw;
   }

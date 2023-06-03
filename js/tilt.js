@@ -1,5 +1,3 @@
-/* before and after slider */
-
 VanillaTilt.init(document.querySelector("#image-comparison-slider"), {
   // Tilt Effect - vanilla-tilt.js (https://micku7zu.github.io/vanilla-tilt.js/) is required for this
   max: 5, // max tilt rotation (degrees (deg))
