@@ -309,10 +309,23 @@
                   <li
                     class="splide__slide interactable"
                     data-type="video"
-                    data-splide-html-video="assets/video/short1.webm"
                     playsInline
+                    data-splide-html-video="assets/video/short1.webm"
                     poster="assets/img/responsive/1-1x.webp"
                   >
+                    <video
+                      id="video"
+                      preload="metadata"
+                      onloadstart="this.volume=0.5"
+                      playsinline
+                    >
+                      <source
+                        id="video-source"
+                        type="video/mp4"
+                        src="assets/video/main-video.mp4"
+                        poster="assets/img/thumb-main-video.png"
+                      />
+                    </video>
                     <img
                       alt="Carousel Thumbnail"
                       srcset="
@@ -863,7 +876,6 @@
         playerOptions: {
           htmlVideo: {
             playsInline: true,
-            poster: "assets/img/responsive/1-1x.webp",
             preload: true,
           },
         },
