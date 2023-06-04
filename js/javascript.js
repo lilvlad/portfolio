@@ -7,6 +7,15 @@ document.getElementById("cards").onmousemove = (e) => {
       t.style.setProperty("--mouse-y", `${n}px`);
   }
 };
+document.getElementById("cards2").onmousemove = (e) => {
+  for (let t of document.getElementsByClassName("card")) {
+    let a = t.getBoundingClientRect(),
+      i = e.clientX - a.left,
+      n = e.clientY - a.top;
+    t.style.setProperty("--mouse-x", `${i}px`),
+      t.style.setProperty("--mouse-y", `${n}px`);
+  }
+};
 let index = 0,
   interval = 1e3;
 const rand = (e, t) => Math.floor(Math.random() * (t - e + 1)) + e,
