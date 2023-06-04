@@ -266,10 +266,10 @@
           <div class="container-carousel">
             <div class="marquee">
               <div class="box">
-                <div class="item">Shorts</div>
+                <div class="item">Short</div>
                 <div class="item">Tiktok</div>
                 <div class="item">Reels</div>
-                <div class="item">Shorts</div>
+                <div class="item">Short</div>
               </div>
               <h1>Videos</h1>
             </div>
@@ -460,25 +460,16 @@
     <script>
       var tl3 = gsap.timeline({
         repeat: -1,
-        defaults: { duration: 1, delay: 1, ease: "expo.inOut" },
+        defaults: { duration: 1.5, delay: 1, ease: "expo.inOut" },
       });
       tl3.to(".item", {
-        yPercent: "-100",
-        stagger: {
-          amount: 0.3,
-        },
+        yPercent: -100,
       });
       tl3.to(".item", {
-        yPercent: "-200",
-        stagger: {
-          amount: 0.3,
-        },
+        yPercent: -200,
       });
       tl3.to(".item", {
-        yPercent: "-300",
-        stagger: {
-          amount: 0.3,
-        },
+        yPercent: -300,
       });
 
       /* Text Reveal onload */

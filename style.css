@@ -112,6 +112,21 @@ html {
   overflow: hidden;
   /* border: 1px solid red; */
 }
+.box:after {
+  content: "";
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-left: -8rem;
+  margin-top: 2.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(20, 20, 20) 100%
+  );
+}
 
 .item {
   width: 100%;
@@ -1241,6 +1256,21 @@ body:hover > #trailer {
     margin-left: -4.5rem;
     background: linear-gradient(
       0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(20, 20, 20) 100%
+    );
+  }
+  .box:after {
+    content: "";
+    width: 35%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin-left: -4.5rem;
+    margin-top: 3.3rem;
+    background: linear-gradient(
+      180deg,
       rgba(255, 255, 255, 0) 0%,
       rgb(20, 20, 20) 100%
     );
