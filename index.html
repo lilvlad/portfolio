@@ -223,7 +223,7 @@
       </div> -->
       <div class="page page-active" data-page="1">
         <!-- Title -->
-        <div class="magic-container">
+        <section class="magic-container">
           <div class="title">
             <div class="line">
               <h1>Hey, I am Vlad <br /></h1>
@@ -259,7 +259,7 @@
               </h1>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Splide carousel -->
         <section class="page-container">
           <div class="container-carousel">
@@ -436,6 +436,13 @@
       async
     ></script>
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    ></script>
+    <script
       src="https://code.jquery.com/jquery-3.6.4.js"
       integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
       crossorigin="anonymous"
@@ -453,6 +460,19 @@
           amount: 0.3,
         },
       });
+
+      /* Contact Icon Reveal */
+      TweenMax.fromTo(
+        ".contact-icon",
+        1.5,
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+        },
+        0
+      );
+
       /* Contact Icon follow */
       var hoverMouse = function ($el) {
         $el.each(function () {
@@ -534,6 +554,50 @@
 
       hoverMouse($("a"));
 
+      /* ScrollTrigger & onLoad Animations */
+      gsap.registerPlugin(ScrollTrigger);
+
+      class RevealonLoadOrOnScroll {
+        constructor() {
+          this.DOM = {
+            shorts: document.querySelector(".container-carousel"),
+            sections: document.querySelectorAll(".page-container"),
+          };
+          this.init();
+        }
+        init() {
+          this.shortsAnimation();
+          this.sectionsAnimations();
+        }
+        shortsAnimation() {
+          gsap.from(this.DOM.shorts, {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.5,
+            scrollTrigger: {
+              trigger: this.DOM.shorts,
+              toggleActions: "play none none none",
+            },
+          });
+        }
+        sectionsAnimations() {
+          this.DOM.sections.forEach((card, index) => {
+            gsap.from(card, {
+              duration: 1,
+              opacity: 0,
+              delay: 0,
+              y: 50,
+              scrollTrigger: {
+                trigger: card,
+                toggleActions: "play none none none",
+              },
+            });
+          });
+        }
+      }
+      new RevealonLoadOrOnScroll();
+
       $(document).ready(function () {
         $("#memoji").hover(
           function () {
@@ -557,7 +621,7 @@
         arrows: false,
         wheel: false,
         /* slideFocus: true,
-        isNavigation: true, 
+        isNavigation: true,
         pagination: true,*/
         video: {
           loop: true,
