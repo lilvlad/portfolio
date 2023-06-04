@@ -204,10 +204,9 @@ html {
   flex-direction: row;
   position: fixed; /* position: relative; */
   top: 0;
-  left: 0;
+  /*left: 0;*/
   margin: auto;
-  margin-top: 25px;
-  margin-left: 100px;
+
   overflow: hidden;
   max-width: 100%;
   background-color: #f6f6f6;
