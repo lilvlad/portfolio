@@ -202,7 +202,7 @@ html {
 .nav {
   display: inline-flex;
   flex-direction: row;
-  position: fixed; /* position: relative; */
+  position: fixed;
   top: 0;
   margin: auto;
   margin-top: 25px;
