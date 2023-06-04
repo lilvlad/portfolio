@@ -280,6 +280,7 @@
                     class="splide__slide interactable"
                     data-type="video"
                     data-splide-html-video="assets/video/short2.mp4"
+                    playsInline
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -295,6 +296,7 @@
                     class="splide__slide interactable"
                     data-type="video"
                     data-splide-html-video="assets/video/short1.webm"
+                    playsInline
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -310,6 +312,7 @@
                     class="splide__slide interactable"
                     data-type="video"
                     data-splide-html-video="assets/video/short3.mp4"
+                    playsInline
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -331,7 +334,12 @@
         <section class="page-container">
           <h1>Latest Video</h1>
           <div id="video-container" class="interactable" data-type="video">
-            <video id="video" preload="metadata" onloadstart="this.volume=0.5">
+            <video
+              id="video"
+              preload="metadata"
+              onloadstart="this.volume=0.5"
+              playsinline
+            >
               <source
                 id="video-source"
                 type="video/mp4"
