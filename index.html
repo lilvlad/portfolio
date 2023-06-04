@@ -610,41 +610,39 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener("load", function () {
-        new Splide(".splide", {
-          type: "loop",
-          padding: "5rem",
-          perPage: 3,
-          perMove: 1,
-          snap: true,
-          autoHeight: true,
-          volume: (number = 0.5),
-          cover: false,
-          arrows: false,
-          wheel: false,
-          /* focus: "center",
+      new Splide(".splide", {
+        type: "loop",
+        padding: "5rem",
+        perPage: 3,
+        perMove: 1,
+        snap: true,
+        autoHeight: true,
+        volume: (number = 0.5),
+        cover: false,
+        arrows: false,
+        wheel: false,
+        /* focus: "center",
         slideFocus: true,
         isNavigation: true,
         pagination: true,*/
-          video: {
-            loop: true,
-            disableOverlayUI: true,
-            hideControls: true,
+        video: {
+          loop: true,
+          disableOverlayUI: true,
+          hideControls: true,
+        },
+        playerOptions: {
+          htmlVideo: {
+            playsInline: true,
+            preload: true,
           },
-          playerOptions: {
-            htmlVideo: {
-              playsInline: true,
-              preload: true,
-            },
+        },
+        mediaQuery: "max",
+        breakpoints: {
+          768: {
+            perPage: 1,
           },
-          mediaQuery: "max",
-          breakpoints: {
-            768: {
-              perPage: 1,
-            },
-          },
-        }).mount(window.splide.Extensions);
-      });
+        },
+      }).mount(window.splide.Extensions);
 
       var tl3 = gsap.timeline({
         repeat: -1,
