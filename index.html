@@ -30,6 +30,18 @@
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css"
     />
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link
+      rel="preload"
+      href="assets/video/main-video.mp4"
+      as="video"
+      type="video/mp4"
+    />
+    <link
+      rel="preload"
+      href="assets/video/short1.webm"
+      as="video"
+      type="video/webm"
+    />
     <title>Website</title>
   </head>
   <body>
@@ -281,6 +293,7 @@
                     data-type="video"
                     data-splide-html-video="assets/video/short2.mp4"
                     playsInline
+                    preload
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -297,6 +310,7 @@
                     data-type="video"
                     data-splide-html-video="assets/video/short1.webm"
                     playsInline
+                    poster="assets/img/responsive/1-1x.webp"
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -313,6 +327,7 @@
                     data-type="video"
                     data-splide-html-video="assets/video/short3.mp4"
                     playsInline
+                    preload
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -840,14 +855,13 @@
         pagination: true,*/
         video: {
           loop: true,
-          disableOverlayUI: false,
-          hideControls: false,
+          disableOverlayUI: true,
+          hideControls: true,
         },
         mediaQuery: "max",
         breakpoints: {
           768: {
             perPage: 1,
-            cover: true,
           },
         },
       }).mount(window.splide.Extensions);
