@@ -40,7 +40,9 @@
     transform: rotate(180deg);
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--bg-color);
   display: grid;
@@ -50,10 +52,9 @@ body {
   place-items: center;
   align-items: center;
   font-family: var(--font);
+  width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -1306,6 +1307,65 @@ input[type="submit"]:hover {
   color: white;
   text-align: center;
 }
+
+/* Marquee Scroll */
+
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.container-marquee {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.marquee-scroll1 {
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+  transform: rotate(4deg) translateY(25px);
+  background-color: var(--color3);
+  z-index: 4;
+}
+.marquee-scroll2 {
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+  transform: rotate(-4deg) translateY(-25px);
+  background-color: var(--color1);
+  z-index: 5;
+}
+.marquee__inner {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+}
+.marquee__inner span {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.marquee-scroll .first {
+  transform: translateX(0%);
+}
+.second {
+  transform: translateX(-100%);
+}
+
 /* Media queries Responsive */
 
 @media screen and (max-width: 64rem) {
@@ -1315,7 +1375,7 @@ input[type="submit"]:hover {
   }
   .splide {
     width: 100vw;
-    padding-inline: 0.5rem;
+    /* padding-inline: 0.5rem; */
   }
   .splide__video video {
     border-radius: 1rem;
@@ -1342,6 +1402,15 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 32rem) {
+  .marquee-scroll1 {
+    transform: rotate(5deg) translateY(0px) scale(1.1);
+  }
+  .marquee-scroll2 {
+    transform: rotate(-5deg) translateY(-25px) scale(1.1);
+  }
+  .marquee__inner span {
+    font-size: 1.5rem;
+  }
   .contact {
     width: 90vw;
   }

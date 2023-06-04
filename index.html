@@ -222,7 +222,7 @@
           </div>
         </div>
       </div> -->
-      <div class="page page-active" data-page="1">
+      <section class="page page-active" data-page="1">
         <!-- Title -->
         <section class="magic-container">
           <div class="title">
@@ -294,7 +294,7 @@
                   <li
                     class="splide__slide interactable"
                     data-type="video"
-                    data-splide-html-video="assets/video/short1.mp4"
+                    data-splide-html-video="assets/video/short1.webm"
                   >
                     <img
                       alt="Carousel Thumbnail"
@@ -402,6 +402,7 @@
             </div>
           </div>
         </section>
+
         <!-- Tilt Effect -->
         <section class="page-container">
           <h1>The Process of Making</h1>
@@ -426,6 +427,28 @@
                 <i class="ri-expand-left-right-line"></i>
               </div>
               <div class="handle-line"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Marquee -->
+        <section class="page-container">
+          <div class="container-marquee">
+            <div class="marquee-scroll1">
+              <div class="marquee__inner first">
+                <span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span>
+              </div>
+            </div>
+            <div class="marquee-scroll2">
+              <div class="marquee__inner second">
+                <span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span
+                ><span> EASY ANSWERS FOR IMPORTANT QUESTIONS • </span>
+              </div>
             </div>
           </div>
         </section>
@@ -532,7 +555,7 @@
             </ul>
           </div>
         </section>
-      </div>
+      </section>
     </section>
 
     <!-- Main JS Script is in the <head> -->
@@ -725,6 +748,50 @@
         }
       }
       new RevealonLoadOrOnScroll();
+
+      /* Marquee Scroll */
+      gsap.registerPlugin(ScrollTrigger);
+
+      // saveStyles is used because GSAP writes inline CSS for styling.
+      // If we resize our browser, we want the styling of each viewport-based animation to be saved.
+      ScrollTrigger.saveStyles(".first, .second, .container-marquee");
+
+      ScrollTrigger.matchMedia({
+        // the mobile animations are the same as the desktop, except the font colors are different
+        // the scrub is delayed by 1s with relation to the scrollbar (scrub: 1)
+        // the animation starts a bit earlier
+        "(max-width: 768px)": function () {
+          let mobileTL = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".marquee-scroll1",
+              start: "-100% bottom",
+              scrub: 1,
+            },
+          });
+
+          mobileTL
+            .to(".first", { duration: 2, xPercent: -100 })
+            .to(".second", { duration: 2, xPercent: 100 }, "<")
+            .to(".container-marquee", { duration: 0.5 }, "<");
+        },
+
+        // The tablet and desktop animations have a delay of 7s on scrubs (scrub: 2).
+        "(min-width: 769px)": function () {
+          let desktopTL = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".marquee-scroll1",
+              start: "-40% bottom",
+              scrub: 7,
+              /* markers: true, */
+            },
+          });
+
+          desktopTL
+            .to(".first", { duration: 2, xPercent: -100 })
+            .to(".second", { duration: 2, xPercent: 100 }, "<")
+            .to(".container-marquee", { duration: 2 }, "<");
+        },
+      });
 
       /* stagger */
       gsap.from(".splide__slide", {
