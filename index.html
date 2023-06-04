@@ -35,6 +35,7 @@
       href="assets/video/main-video.mp4"
       as="video"
       type="video/mp4"
+      poster="assets/img/thumb-main-video.png"
     />
     <link
       rel="preload"
@@ -359,6 +360,7 @@
                 id="video-source"
                 type="video/mp4"
                 src="assets/video/main-video.mp4"
+                poster="assets/img/thumb-main-video.png"
               />
             </video>
             <!--  <button id="play-button" type="button" title="play-btn">
@@ -857,6 +859,13 @@
           loop: true,
           disableOverlayUI: true,
           hideControls: true,
+        },
+        playerOptions: {
+          htmlVideo: {
+            playsInline: true,
+            poster: "assets/img/responsive/1-1x.webp",
+            preload: true,
+          },
         },
         mediaQuery: "max",
         breakpoints: {
