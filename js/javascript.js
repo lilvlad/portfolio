@@ -82,7 +82,7 @@ const trailer = document.getElementById("trailer"),
   animateTrailer = (e, t) => {
     let a = e.clientX - trailer.offsetWidth / 2,
       i = e.clientY - trailer.offsetHeight / 2,
-      n = { transform: `translate(${a}px, ${i}px) scale(${t ? 4 : 1})` };
+      n = { transform: `translate(${a}px, ${i}px) scale(${t ? 3 : 1})` };
     trailer.animate(n, { duration: 600, fill: "forwards" });
   },
   getTrailerClass = (e) =>

@@ -183,6 +183,18 @@
                     </video>
                   </div>
                 </div>
+                <div class="item">
+                  <div class="interactable" data-type="video">
+                    <video
+                      class="js-player"
+                      crossorigin
+                      playsinline
+                      poster="assets/img/responsive/3-1x.webp"
+                    >
+                      <source src="assets/video/short3.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -405,17 +417,26 @@
             <p>Connect with me🔗</p>
             <ul>
               <li>
-                <a href="https://www.instagram.com/lilvladvfx/" target="blank"
+                <a
+                  href="https://www.instagram.com/lilvladvfx/"
+                  target="blank"
+                  aria-label="Instagram Channel"
                   ><i class="fab ri-instagram-line"></i
                 ></a>
               </li>
               <li>
-                <a href="https://twitter.com/lilvladvfx" target="blank"
+                <a
+                  href="https://twitter.com/lilvladvfx"
+                  target="blank"
+                  aria-label="Twitter Channel"
                   ><i class="fab ri-twitter-line"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@lilvl4d"
+                <a
+                  href="https://www.youtube.com/@lilvl4d"
+                  target="blank"
+                  aria-label="Youtube Channel"
                   ><i class="fab ri-youtube-line"></i
                 ></a>
               </li>
@@ -488,14 +509,14 @@
 
       var playerSettings = {
         controls: [
-          "play-large",
+          /* "mute",
+          "volume", 
+          "play-large", */
           "progress",
           "play",
           "duration",
           "current-time",
           "fullscreen",
-          /* "mute",
-          "volume", */
         ],
         fullscreen: { enabled: true, iosNative: true, fallback: true },
         resetOnEnd: true,
@@ -505,7 +526,6 @@
         playsinline: true,
         autopause: true,
         keyboard: false,
-        volume: 0.5,
       };
 
       const players = Plyr.setup(".js-player", playerSettings);
@@ -745,13 +765,13 @@
       });
 
       /* stagger */
-      gsap.from(".splide__slide", {
-        y: 500,
+      gsap.from(".item", {
+        y: 700,
         duration: 1,
         delay: 2,
         ease: "power4.easeOut",
         stagger: {
-          from: "center",
+          from: "left",
           each: 0.1,
         },
       });
