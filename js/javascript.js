@@ -101,6 +101,7 @@ window.onmousemove = (e) => {
     (trailer.dataset.type = a ? t.dataset.type : ""),
     a && (i.className = getTrailerClass(t.dataset.type));
 };
+/* 
 const videoContainer = document.getElementById("video-container"),
   playButton = document.getElementById("play-button"),
   video = document.getElementById("video");
@@ -163,3 +164,4 @@ video.addEventListener("timeupdate", updateProgressBar),
       '<span class="play-icon"><i class="ri-play-circle-fill"></i></span> <div class="progress-bar-animation"> <div class="progress-bar-circle"></div> </div>'),
       (playButton.style.opacity = "1");
   });
+ */

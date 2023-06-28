@@ -197,6 +197,7 @@
               preload="metadata"
               onloadstart="this.volume=0.5"
               playsinline
+              class="js-player"
             >
               <source
                 id="video-source"
@@ -487,7 +488,8 @@
 
       var playerSettings = {
         controls: [
-          /* "play-large", */ /* Play button on center */ "progress",
+          "play-large",
+          "progress",
           "play",
           "duration",
           "current-time",
