@@ -493,15 +493,19 @@
           "play",
           "duration",
           "current-time",
+          "fullscreen",
           /* "mute",
           "volume", */
-          "fullscreen",
         ],
-        fullscreen: { enabled: true },
+        fullscreen: { enabled: true, iosNative: true, fallback: true },
         resetOnEnd: true,
         hideControls: true,
         clickToPlay: true,
+        disableContextMenu: true,
+        playsinline: true,
+        autopause: true,
         keyboard: false,
+        volume: 0.5,
       };
 
       const players = Plyr.setup(".js-player", playerSettings);

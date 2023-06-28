@@ -1373,6 +1373,9 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 32rem) {
+  #video-container {
+    max-width: 90%;
+  }
   .marquee-scroll1 {
     transform: rotate(5deg) translateY(0px) scale(1.1);
   }
