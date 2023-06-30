@@ -285,17 +285,22 @@
         <!-- Tilt Effect -->
         <section class="page-container">
           <h1>The Process of Making</h1>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+            defer
+          ></script>
+          <script src="js/tilt.js" defer></script>
           <div
             id="image-comparison-slider"
             onmouseover="hideTrailer()"
             onmouseout="showTrailer()"
           >
             <video preload="metadata" muted playsinline loop autoplay>
-              <source type="video/mp4" src="assets/video/beforeFX.webm" />
+              <source type="video/webm" src="assets/video/beforeFX.webm" />
             </video>
             <div class="img-wrapper">
               <video preload="metadata" muted playsinline loop autoplay>
-                <source type="video/mp4" src="assets/video/afterFX.webm" />
+                <source type="video/webm" src="assets/video/afterFX.webm" />
               </video>
             </div>
             <span class="label label-before">Before</span>
@@ -308,6 +313,12 @@
               <div class="handle-line"></div>
             </div>
           </div>
+          <!-- <script
+            src="https://static.elfsight.com/platform/platform.js"
+            data-use-service-core
+            defer
+          ></script>
+          <div class="elfsight-app-d651e815-6b95-4b0b-a5de-be08a4f850bd"></div> -->
         </section>
         <!-- Marquee -->
         <section class="page-container">
@@ -452,8 +463,6 @@
 
     <!-- Main JS Script is in the <head> -->
     <script src="js/javascript.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="js/tilt.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
