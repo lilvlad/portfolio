@@ -23,9 +23,9 @@
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
     <link
       preload
-      href="assets/video/main-video.mp4"
+      href="assets/video/swift.mp4"
       type="video/mp4"
-      poster="assets/img/thumb-main-video.png"
+      poster="assets/img/thumb-swift.png"
     />
     <link preload href="assets/video/short1.webm" type="video/webm" />
     <link
@@ -48,13 +48,13 @@
   </head>
   <body>
     <!-- mouse -->
-    <div id="trailer">
+    <!-- <div id="trailer">
       <i id="trailer-icon" class="fa-solid fa-arrow-up-right"></i>
-    </div>
+    </div> -->
     <!-- mouse end -->
-    <nav class="nav">
+    <nav class="nav" id="scrollToTopBtn">
       <img
-        src="assets/img/memoji-1x.webp"
+        src="assets/img/memoji-static.webp"
         alt="memoji"
         id="memoji"
         class="nav-img"
@@ -67,21 +67,21 @@
         active-color="white"
         data-switcher
         data-tab="1"
-        >Video Editing</span
       >
-
+        Video Editing</span
+      >
       <span class="nav-indicator"></span>
     </nav>
     <!-- Contact Us -->
     <section class="contact-icon">
-      <a href="#contact-form">
+      <a href="#contact" class="follow">
         <video
           muted
           playsinline
           loop
           autoplay
           disablePictureInPicture
-          src="assets/img/memoji.mp4"
+          src="assets/video/contact-memoji.webm"
           id="contact-video"
         ></video>
       </a>
@@ -106,7 +106,7 @@
     </section>
 
     <section class="pages">
-      <section class="page page-active" data-page="1">
+      <section id="top" class="page page-active" data-page="1">
         <!-- Title -->
         <section class="magic-container">
           <div class="title">
@@ -158,7 +158,7 @@
               <h1>Videos</h1>
             </div>
             <div class="">
-              <div class="owl-carousel video-section">
+              <div class="owl-one owl-carousel owl-theme video-section">
                 <div class="item">
                   <div class="interactable" data-type="video">
                     <video
@@ -202,27 +202,54 @@
 
         <!-- Main Video -->
         <section class="page-container">
-          <h1>Latest Video</h1>
-          <div id="video-container" class="interactable" data-type="video">
-            <video
-              id="video"
-              preload="metadata"
-              onloadstart="this.volume=0.5"
-              playsinline
-              class="js-player"
-            >
-              <source
-                id="video-source"
-                type="video/mp4"
-                src="assets/video/main-video.mp4"
-              />
-            </video>
-            <!--  <button id="play-button" type="button" title="play-btn">
-            <span class="play-icon"><i class="ri-play-circle-fill"></i></span>
-            <div class="progress-bar-animation">
-              <div class="progress-bar-circle"></div>
+          <h1>Long Form Videos</h1>
+          <div class="container-carousel">
+            <div>
+              <div class="owl-two owl-carousel owl-theme video-section">
+                <div class="item">
+                  <div class="interactable" data-type="video">
+                    <video
+                      preload="metadata"
+                      onloadstart="this.volume=0.5"
+                      playsinline
+                      class="js-player"
+                      poster="assets/img/thumb-swift.png"
+                    >
+                      <source type="video/mp4" src="assets/video/swift.mp4" />
+                    </video>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="interactable" data-type="video">
+                    <video
+                      preload="metadata"
+                      onloadstart="this.volume=0.5"
+                      playsinline
+                      class="js-player"
+                      poster="assets/img/thumb-gaming.png"
+                    >
+                      <source
+                        type="video/mp4"
+                        src="assets/video/gaming-video.mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="interactable" data-type="video">
+                    <video
+                      preload="metadata"
+                      onloadstart="this.volume=0.5"
+                      playsinline
+                      class="js-player"
+                      poster="assets/img/thumb-vlog2.png"
+                    >
+                      <source type="video/mp4" src="assets/video/vlog.mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
             </div>
-          </button> -->
           </div>
         </section>
         <!-- Hover Cards -->
@@ -279,6 +306,7 @@
                 </div>
               </div>
             </div>
+            <a class="call-btn" href="#contact">Book a Call</a>
           </div>
         </section>
 
@@ -395,9 +423,119 @@
             </div>
           </div>
         </section>
-        <section class="page-container" id="contact-form">
+        <!-- Clients Inifite Slider -->
+        <section class="page-container">
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <!-- <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                /> -->
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/jimipapi.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Jimipapi 🎮</h2>
+                    <p>700k Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/hamza.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Hamza</h2>
+                    <p>2M Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/ceo-testosterone.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Jack Hopkins 🧬</h2>
+                    <p>100k Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/iman-gadzhi.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Iman Gadzhi</h2>
+                    <p>3M Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/jimipapi.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Jimipapi 🎮</h2>
+                    <p>700k Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/swift.png"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Swift 🏦</h2>
+                    <p>Online Banking</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
+                    src="assets/img/clients/profile.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Client</h2>
+                    <p>100k Followers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-container" id="contact">
           <h1>Let's Work Together 🤝</h1>
-
+          <h2>Book a Call ☎️</h2>
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/lilvlad/30min?primary_color=357095"
+            style="min-width: 320px; height: 700px"
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          ></script>
+          <!-- Calendly inline widget end -->
+          <h2>OR Send an Email 📧</h2>
           <form
             class="contact"
             action="https://formsubmit.co/f91dd69b86a793f6d72b9dd33a11b194"
@@ -433,6 +571,7 @@
             <ul>
               <li>
                 <a
+                  class="follow"
                   href="https://www.instagram.com/lilvladvfx/"
                   target="blank"
                   aria-label="Instagram Channel"
@@ -441,6 +580,7 @@
               </li>
               <li>
                 <a
+                  class="follow"
                   href="https://twitter.com/lilvladvfx"
                   target="blank"
                   aria-label="Twitter Channel"
@@ -449,6 +589,7 @@
               </li>
               <li>
                 <a
+                  class="follow"
                   href="https://www.youtube.com/@lilvl4d"
                   target="blank"
                   aria-label="Youtube Channel"
@@ -476,14 +617,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 
     <script>
-      $(".owl-carousel").owlCarousel({
+      $(".owl-one").owlCarousel({
         stagePadding: 500,
         loop: true,
         margin: 10,
         items: 3,
-        nav: true,
+        nav: false,
+        dots: true,
         merge: true,
         video: true,
         lazyLoad: true,
@@ -515,15 +658,67 @@
           },
           1800: {
             items: 3,
-            stagePadding: 100,
+            stagePadding: 50,
           },
         },
       });
 
+      $(".owl-two").owlCarousel({
+        stagePadding: 220,
+        loop: true,
+        margin: 10,
+        items: 1,
+        dots: true,
+        video: true,
+        lazyLoad: true,
+        center: true,
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 50,
+          },
+          600: {
+            items: 1,
+            stagePadding: 100,
+          },
+          1000: {
+            items: 1,
+            stagePadding: 200,
+          },
+          1200: {
+            items: 1,
+            stagePadding: 250,
+          },
+          1400: {
+            items: 1,
+            stagePadding: 300,
+          },
+          1600: {
+            items: 1,
+            stagePadding: 350,
+          },
+          1800: {
+            items: 1,
+            stagePadding: 150,
+          },
+        },
+      });
+
+      $(".owl-carousel").find(".owl-dots").removeClass("disabled");
+      $(".owl-carousel").on("changed.owl.carousel", function (event) {
+        $(this).find(".owl-dots").removeClass("disabled");
+      });
+
+      $(".video-section").on("translated.owl.carousel", function (event) {
+        players.forEach(function (instance, index1) {
+          instance.pause();
+        });
+      });
+
       var playerSettings = {
         controls: [
-          /* "mute",
-          "volume", */
+          "mute",
+          "volume",
           "play-large",
           "progress",
           "play",
@@ -538,7 +733,7 @@
         disableContextMenu: true,
         playsinline: true,
         autopause: true,
-        keyboard: false,
+        keyboard: true,
       };
 
       const players = Plyr.setup(".js-player", playerSettings);
@@ -553,21 +748,29 @@
         });
       });
 
-      $(".video-section").on("translated.owl.carousel", function (event) {
-        players.forEach(function (instance, index1) {
-          instance.pause();
-        });
-      });
       $(document).ready(function () {
         $("#memoji").hover(
           function () {
             $(this).attr("src", "assets/img/memoji.gif");
           },
           function () {
-            $(this).attr("src", "assets/img/memoji-1x.webp");
+            $(this).attr("src", "assets/img/memoji-static.webp");
           }
         );
       });
+
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      var rootElement = document.documentElement;
+
+      function scrollToTop() {
+        // Scroll to top logic
+        rootElement.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      scrollToTopBtn.addEventListener("click", scrollToTop);
 
       var tl3 = gsap.timeline({
         repeat: -1,
@@ -687,7 +890,7 @@
         });
       };
 
-      hoverMouse($("a"));
+      hoverMouse($("a.follow"));
 
       /* ScrollTrigger & onLoad Animations */
       gsap.registerPlugin(ScrollTrigger);
