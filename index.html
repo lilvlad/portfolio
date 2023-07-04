@@ -215,7 +215,26 @@
                       class="js-player"
                       poster="assets/img/thumb-swift.png"
                     >
-                      <source type="video/mp4" src="assets/video/swift.mp4" />
+                      <source
+                        type="video/mp4"
+                        src="assets/video/swift-video.mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="interactable" data-type="video">
+                    <video
+                      preload="metadata"
+                      onloadstart="this.volume=0.5"
+                      playsinline
+                      class="js-player"
+                      poster="assets/img/thumb-vlog.png"
+                    >
+                      <source
+                        type="video/mp4"
+                        src="assets/video/vlog-video.mp4"
+                      />
                     </video>
                   </div>
                 </div>
@@ -232,19 +251,6 @@
                         type="video/mp4"
                         src="assets/video/gaming-video.mp4"
                       />
-                    </video>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="interactable" data-type="video">
-                    <video
-                      preload="metadata"
-                      onloadstart="this.volume=0.5"
-                      playsinline
-                      class="js-player"
-                      poster="assets/img/thumb-vlog2.png"
-                    >
-                      <source type="video/mp4" src="assets/video/vlog.mp4" />
                     </video>
                   </div>
                 </div>
@@ -469,18 +475,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slide">
-                <div class="client-profile">
-                  <img
-                    src="assets/img/clients/iman-gadzhi.jpg"
-                    alt="client-profile"
-                  />
-                  <div class="client-data">
-                    <h2>Iman Gadzhi</h2>
-                    <p>3M Followers</p>
-                  </div>
-                </div>
-              </div>
+
               <div class="slide">
                 <div class="client-profile">
                   <img
@@ -508,6 +503,18 @@
               <div class="slide">
                 <div class="client-profile">
                   <img
+                    src="assets/img/clients/iman-gadzhi.jpg"
+                    alt="client-profile"
+                  />
+                  <div class="client-data">
+                    <h2>Iman Gadzhi</h2>
+                    <p>3M Followers</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="client-profile">
+                  <img
                     src="assets/img/clients/profile.jpg"
                     alt="client-profile"
                   />
@@ -522,12 +529,12 @@
         </section>
         <section class="page-container" id="contact">
           <h1>Let's Work Together 🤝</h1>
-          <h2>Book a Call ☎️</h2>
+          <h2>Schedule a Call 📞</h2>
           <!-- Calendly inline widget begin -->
           <div
             class="calendly-inline-widget"
-            data-url="https://calendly.com/lilvlad/30min?primary_color=357095"
-            style="min-width: 320px; height: 700px"
+            data-url="https://calendly.com/lilvlad/10-30min?primary_color=357095"
+            style="min-width: 400px; height: 700px"
           ></div>
           <script
             type="text/javascript"
@@ -549,12 +556,12 @@
                 placeholder="Your Name"
                 required
               />
-              <!-- <select name="budget" id="budget-select">
-                <option value="">Choose your budget</option>
+              <select name="budget" id="budget-select">
+                <option value="none">Choose your budget</option>
                 <option value="low">10€-50€</option>
                 <option value="medium">50€-200€</option>
                 <option value="high">500€+</option>
-              </select> -->
+              </select>
             </div>
             <input
               type="email"
@@ -717,8 +724,6 @@
 
       var playerSettings = {
         controls: [
-          "mute",
-          "volume",
           "play-large",
           "progress",
           "play",
