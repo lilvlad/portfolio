@@ -1453,7 +1453,7 @@ input[type="submit"]:hover {
   width: calc(250px * 10);
 }
 .slider .slide {
-  opacity: 0.5;
+  opacity: 1;
   height: 100px;
   width: 250px;
   margin-inline: 0.5rem;
