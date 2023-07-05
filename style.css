@@ -1453,14 +1453,14 @@ input[type="submit"]:hover {
   width: calc(250px * 10);
 }
 .slider .slide {
-  opacity: 0.3;
+  opacity: 0.5;
   height: 100px;
   width: 250px;
   margin-inline: 0.5rem;
   transition: all 1s;
 }
 .slider .slide:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .client-profile {
