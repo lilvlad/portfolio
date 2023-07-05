@@ -1453,7 +1453,7 @@ input[type="submit"]:hover {
   width: calc(250px * 10);
 }
 .slider .slide {
-  opacity: 1;
+  opacity: 0.4;
   height: 100px;
   width: 250px;
   margin-inline: 0.5rem;
@@ -1529,6 +1529,11 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 32rem) {
+  html,
+  body {
+    overflow-x: hidden;
+    display: block;
+  }
   #video-container {
     max-width: 90%;
   }
@@ -1640,6 +1645,22 @@ input[type="submit"]:hover {
     font-size: 0.8em;
     margin-top: 4px;
   }
+  .slider {
+    width: 90vw;
+  }
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      rgb(20, 20, 20) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 25vh;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+  }
   .owl-carousel:before {
     content: "";
     width: 20%;
@@ -1740,18 +1761,5 @@ input[type="submit"]:hover {
   :root {
     --image-comparison-slider-width: 90vw;
     --image-comparison-slider-handle-width: 35px;
-  }
-}
-
-@media (max-width: 1000px) {
-  body {
-    align-items: flex-start;
-    overflow: auto;
-  }
-}
-
-@media (max-width: 320px) {
-  .card {
-    width: 100%;
   }
 }
