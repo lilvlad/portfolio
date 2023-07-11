@@ -280,6 +280,11 @@ body {
   /* padding-block: 10px; */
 }
 
+.nav video {
+  width: 70px;
+  margin: 4px;
+}
+
 .nav-indicator {
   position: absolute;
   right: 0;
