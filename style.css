@@ -1206,16 +1206,13 @@ body:hover > #trailer {
   margin-block: 1rem;
 }
 
-.call-btn {
-  width: 85%;
+.btn {
   color: white;
-  padding: 14px 20px;
-  margin-top: 2rem;
+
   border: none;
-  border-radius: 4px;
+  border-radius: 10rem;
   cursor: pointer;
   font-family: inherit;
-  font-size: 1.5rem;
   text-decoration: none;
   text-align: center;
   transition: all 0.5s;
@@ -1231,9 +1228,20 @@ body:hover > #trailer {
   animation: background-pan 30s linear infinite;
 }
 
-.call-btn:hover {
+.btn:hover {
   opacity: 0.8;
   transform: scale(1.03);
+}
+
+.call {
+  width: 85%;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 15px 20px;
+}
+
+.load {
+  padding: 10px 25px;
 }
 
 /* Contact form*/
@@ -1494,10 +1502,119 @@ input[type="submit"]:hover {
 .client-data {
   margin-block: 1rem;
 }
+.load-btn {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-process {
+  max-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-block: 2rem;
+}
+
+.process-text {
+  margin-inline: 1rem;
+  color: white;
+}
+.process-text span {
+  font-weight: bold;
+}
+
+.video-showcase {
+  position: relative;
+  margin: 1rem;
+  color: white;
+}
+
+.load-more .more-box {
+  display: none;
+}
+
+.more-box h2 {
+  text-align: center;
+}
+.load-more.show-more .more-box {
+  display: block;
+}
+
+.more-videos {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.more-videos video {
+  max-width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.process-software {
+  display: flex;
+  color: white;
+  position: absolute;
+  top: -1rem;
+  right: -14rem;
+}
+
+.process-software img {
+  max-width: 15%;
+  width: 150px;
+}
+
+.software1 {
+  margin-right: -0.6rem;
+  z-index: 20;
+  transform: rotate(-10deg);
+}
+.software2 {
+  z-index: 15;
+  transform: rotate(10deg);
+}
+
+.video-process video {
+  max-width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  border-radius: 1rem;
+}
 
 /* Media queries Responsive */
 
 @media screen and (max-width: 64rem) {
+  .more-videos {
+    flex-direction: column;
+  }
+  .more-videos video {
+    max-width: 90vw;
+  }
+  .video-process {
+    max-width: 90vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .video-process video {
+    max-width: 90vw;
+  }
+  .process-text {
+    text-align: center;
+    margin-block: 1rem;
+  }
   .title h1 {
     font-size: 1.5rem;
     font-weight: 900;

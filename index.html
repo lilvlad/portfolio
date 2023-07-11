@@ -312,7 +312,7 @@
                 </div>
               </div>
             </div>
-            <a class="call-btn" href="#contact">Book a Call</a>
+            <a class="btn call" href="#contact">Book a Call</a>
           </div>
         </section>
 
@@ -347,12 +347,82 @@
               <div class="handle-line"></div>
             </div>
           </div>
-          <!-- <script
-            src="https://static.elfsight.com/platform/platform.js"
-            data-use-service-core
-            defer
-          ></script>
-          <div class="elfsight-app-d651e815-6b95-4b0b-a5de-be08a4f850bd"></div> -->
+          <div class="video-process">
+            <div class="process-text">
+              <h2>3D Work Showcase</h2>
+              <p>
+                This is a one of the exmaples of a 3D work, of a "racing theme",
+                where it would display the customization of the car in the
+                garage, made with <span>Blender & After Effects.</span>
+              </p>
+            </div>
+            <div class="video-showcase">
+              <div class="process-software">
+                <img class="software1" src="assets/img/blender.svg" alt="" />
+                <img
+                  class="software2"
+                  src="assets/img/afterEffects.svg"
+                  alt=""
+                />
+              </div>
+              <video preload="metadata" muted playsinline loop autoplay>
+                <source type="video/mp4" src="assets/video/ferrari-clip.mp4" />
+              </video>
+              <figcaption>3D Ferrari Garage Scene</figcaption>
+            </div>
+          </div>
+          <div class="load-more">
+            <div class="more-box">
+              <h2>More 3D Works</h2>
+              <div class="more-videos">
+                <div class="video-showcase">
+                  <div class="process-software">
+                    <img
+                      class="software1"
+                      src="assets/img/blender.svg"
+                      alt=""
+                    />
+                    <img
+                      class="software2"
+                      src="assets/img/afterEffects.svg"
+                      alt=""
+                    />
+                  </div>
+                  <video preload="metadata" muted playsinline loop autoplay>
+                    <source
+                      type="video/mp4"
+                      src="assets/video/ferrari-clip.mp4"
+                    />
+                  </video>
+                  <figcaption>3D Swift Card Scene</figcaption>
+                </div>
+                <div class="video-showcase">
+                  <div class="process-software">
+                    <img
+                      class="software1"
+                      src="assets/img/blender.svg"
+                      alt=""
+                    />
+                    <img
+                      class="software2"
+                      src="assets/img/afterEffects.svg"
+                      alt=""
+                    />
+                  </div>
+                  <video preload="metadata" muted playsinline loop autoplay>
+                    <source
+                      type="video/mp4"
+                      src="assets/video/ferrari-clip.mp4"
+                    />
+                  </video>
+                  <figcaption>3D Fortnite Transition Scene</figcaption>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="load-btn" id="loadMore">
+            <a class="btn load" href="#">Load More</a>
+          </div>
         </section>
         <!-- Marquee -->
         <section class="page-container">
@@ -665,8 +735,8 @@
               />
               <select name="budget" id="budget-select">
                 <option value="none">Choose your budget</option>
-                <option value="low">10€-50€</option>
-                <option value="medium">50€-200€</option>
+                <option value="low">50€-100€</option>
+                <option value="medium">150€-300€</option>
                 <option value="high">500€+</option>
               </select>
             </div>
@@ -869,6 +939,25 @@
             $(this).attr("src", "assets/img/memoji-static.webp");
           }
         );
+        /* Load more button */
+        var $fullSection = $(".load-more");
+        var $loadMoreBtn = $("#loadMore");
+
+        $loadMoreBtn.on("click", function (e) {
+          e.preventDefault();
+
+          if ($fullSection.hasClass("show-more")) {
+            $fullSection.find(".more-box").slideUp(300, function () {
+              $fullSection.removeClass("show-more");
+              $loadMoreBtn.find(".btn").text("Load More");
+            });
+          } else {
+            $fullSection.find(".more-box").slideDown(300, function () {
+              $fullSection.addClass("show-more");
+              $loadMoreBtn.find(".btn").text("Show Less");
+            });
+          }
+        });
       });
 
       var scrollToTopBtn = document.getElementById("scrollToTopBtn");
